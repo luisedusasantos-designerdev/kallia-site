@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: helvetica, sans-serif;
+}
+
+header {
+    position: relative;
+    height: 15vw;
+    background-image: url("../imagem/institucional.webp");
+    background-position: center;
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-size: 48px;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: inherit;
+    filter: brightness(0.8);
+
+    z-index: 0;
+}
+
+header > * {
+    position: relative;
+    z-index: 1;
+}
+
+body {
+    
+    font-size: 1.0vw;
+}
+
+
+form {
+    background-color: white;
+    padding: 30px 80px;
+    border-radius: 5px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.row {
+    margin-bottom: 10px;
+}
+
+hr {
+    margin: 25px 0;
+}
+
+button {
+    margin-right: 10px;
+}
