@@ -35,4 +35,4 @@ O site apresenta uma empresa fictícia especializada em móveis planejados e des
 
 ## Autor
 
-Desenvolvido por **SEU NOME**.
+Desenvolvido por LUIS EDUARDO.
