@@ -3,6 +3,7 @@
   padding: 0;
   border: 0;
   font-family: helvetica, sans-serif;
+  box-sizing: border-box;
 }
 
 /* inico pagina header */
@@ -25,7 +26,7 @@
 
   display: flex;
   align-items: center;
-  
+
   position: relative;
 }
 
@@ -59,7 +60,6 @@
 
 .menubutton ion-icon:hover {
   transform: scale(1.15);
- 
 }
 
 .social-links {
@@ -86,7 +86,7 @@
   width: 85%;
   height: 50px;
   margin: 20px auto 0;
-  
+
   background-color: rgb(110, 110, 110);
 
   display: flex;
@@ -99,7 +99,10 @@
   pointer-events: none;
   transform: translateY(-10px);
 
-  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0.3s;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    visibility 0s linear 0.3s;
 }
 
 .menuopcoes a {
@@ -110,11 +113,6 @@
   text-transform: uppercase;
 
   transition: 0.3s;
-  
-}
-
-.menuopcoes a:hover {
-  transform: scale(1.15);
 }
 
 .menuopcoes.active {
@@ -136,8 +134,11 @@
   transition: 0.3s;
 }
 
-#barraambientes hover {
-  transform: scale(1.15);
+@media (hover: hover) and (pointer: fine) {
+  .menuopcoes a:hover,
+  #barraambientes:hover {
+    transform: scale(1.15);
+  }
 }
 
 .menuambientes {
@@ -145,7 +146,6 @@
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
-  
 
   display: grid;
   gap: 20px;
@@ -160,10 +160,11 @@
   visibility: hidden;
   pointer-events: none;
 
-  transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s linear 0.5s; 
-  
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease,
+    visibility 0.5s linear 0.5s;
 }
-
 
 .menuambientes.active {
   opacity: 1;
@@ -173,8 +174,6 @@
 
   transition-delay: 0s;
 }
-
-
 
 /* fim pagina header */
 
@@ -195,7 +194,6 @@
   width: 100%;
   margin: 0;
   position: relative;
-
 }
 
 .imagem-institucional img {
@@ -648,6 +646,249 @@ footer {
   width: 100%;
   height: 100%;
   border: 0;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 560px;
+    height: 75vh;
+  }
+
+  .header,
+  .menuopcoes {
+    width: calc(100% - 24px);
+  }
+
+  .header {
+    top: 12px;
+    display: grid;
+    grid-template-columns: 48px minmax(0, 1fr) auto;
+    padding: 0 10px;
+  }
+
+  .menubutton {
+    margin-left: 0;
+    justify-self: start;
+  }
+
+  .logo {
+    position: static;
+    justify-self: center;
+    transform: none;
+  }
+
+  .logo img {
+    width: 82px;
+    height: auto;
+  }
+
+  .social-links {
+    gap: 5px;
+    margin: 0;
+    justify-self: end;
+  }
+
+  .social-links a {
+    margin-left: 0;
+    font-size: 20px;
+  }
+
+  .menuopcoes {
+    height: auto;
+    min-height: 50px;
+    margin-top: 20px;
+    padding: 18px 20px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .menuopcoes > a,
+  .item-ambientes > #barraambientes {
+    display: block;
+    width: 100%;
+    padding: 12px 0;
+    text-align: left;
+    transform: none;
+  }
+
+  .menuambientes {
+    position: static;
+    transform: none;
+    gap: 0;
+    width: 100%;
+    max-height: 0;
+    margin: 0;
+    padding: 0 0 0 16px;
+    border-left: 2px solid rgba(255, 255, 255, 0.55);
+    text-align: left;
+    overflow: hidden;
+    transition:
+      max-height 0.3s ease,
+      margin 0.3s ease,
+      padding 0.3s ease;
+  }
+
+  .menuambientes a {
+    display: block;
+    padding: 9px 0;
+  }
+
+  .menuopcoes .item-ambientes .menuambientes.active {
+    transform: none;
+    max-height: 160px;
+    margin: 0 0 8px;
+    padding: 4px 0 4px 16px;
+  }
+
+  .imagem-institucional img {
+    min-height: 220px;
+    object-fit: cover;
+  }
+
+  .imagem-institucional h1 {
+    width: 100%;
+    font-size: 34px;
+    text-align: center;
+  }
+
+  .textoimg {
+    padding: 40px 20px 0;
+    display: block;
+  }
+
+  .quemsomos h2 {
+    font-size: 30px;
+  }
+
+  .quemsomos p {
+    font-size: 16px;
+  }
+
+  .imagem-institucional2 {
+    padding: 30px 0 0;
+  }
+
+  .imagem-institucional2 img {
+    width: 100%;
+    height: auto;
+    transform: none;
+  }
+
+  .mvv {
+    padding: 35px 20px 45px;
+    display: block;
+  }
+
+  .missao,
+  .visao,
+  .valores {
+    width: 100%;
+    padding: 20px 0;
+  }
+
+  .blocoambientes {
+    min-height: 0;
+    padding: 16px;
+  }
+
+  .blocoambientes h2 {
+    font-size: 28px;
+    margin: 25px 0 30px;
+  }
+
+  .mosaico {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .imagem-menores {
+    grid-template-rows: none;
+    gap: 16px;
+  }
+
+  .imagem-menor,
+  .imagem-maior {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10;
+  }
+
+  .imagem-maior {
+    aspect-ratio: 16 / 11;
+  }
+
+  .contato {
+    min-height: 0;
+    padding: 0 16px 45px;
+  }
+
+  .contato h2 {
+    margin: 40px 0;
+  }
+
+  .contato-mensagem {
+    display: block;
+  }
+
+  #faleconosco,
+  .container {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+  }
+
+  #faleconosco {
+    padding-bottom: 35px;
+  }
+
+  #faleconosco h3 {
+    font-size: 32px;
+  }
+
+  .container {
+    padding-bottom: 25px;
+  }
+
+  #mensagem {
+    height: 140px;
+  }
+
+  .depoimentos {
+    padding: 45px 20px;
+  }
+
+  .depoimentos h2 {
+    font-size: 34px;
+  }
+
+  .caixas {
+    grid-template-columns: 1fr;
+  }
+
+  .cliente {
+    padding: 20px;
+  }
+
+  footer {
+    padding: 35px 20px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 30px;
+  }
+
+  #logo {
+    justify-content: flex-start;
+  }
+
+  .endmapa {
+    flex-direction: column;
+  }
+
+  .maparodape {
+    width: 100%;
+    height: 220px;
+  }
 }
 
 /* rodapé - fim*/

@@ -98,7 +98,16 @@ header > * {
 
 body {
   background-color: #f4f1ed;
-  font-size: 1vw;
+  font-size: 1rem;
+}
+
+.tabela-responsiva {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.tabela-responsiva table {
+  min-width: 620px;
 }
 
 tfoot {
@@ -110,4 +119,20 @@ tfoot {
 
 #rodape {
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  header {
+    height: 180px;
+    padding: 20px;
+  }
+
+  header h2 {
+    font-size: 30px;
+  }
+
+  td,
+  th {
+    white-space: nowrap;
+  }
 }

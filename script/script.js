@@ -6,6 +6,10 @@ const menuAmbientes = document.querySelector(".menuambientes")
 
 menubutton.addEventListener("click", function () {
   menuopcoes.classList.toggle("active")
+
+  if (!menuopcoes.classList.contains("active")) {
+    menuAmbientes.classList.remove("active")
+  }
 })
 
 linkAmbientes.addEventListener("click", function (event) {
