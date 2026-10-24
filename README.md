@@ -1,6 +1,6 @@
 # Kallia
 
-Projeto de website desenvolvido durante o curso de Desenvolvimento de Software Multiplataforma da Fatec.
+Projeto de website desenvolvido durante o curso de Desenvolvimento de Software Multiplataforma da Fatec-Franca.
 
 O site apresenta uma empresa fictícia especializada em móveis planejados e design de interiores.
 
